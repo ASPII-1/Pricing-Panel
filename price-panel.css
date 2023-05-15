@@ -1,0 +1,165 @@
+/* reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* ... */
+
+/* variables */
+:root {
+    /* colors */
+    --tu1-color-primary-hsl: 250, 84%, 54%;
+    --tu1-color-accent-hsl: 250, 84%, 54%;
+
+    /* spacing */
+    --tu1-space-sm: 0.75rem;
+    --tu1-space-md: 1.25rem;
+    --tu1-space-lg: 2rem;
+
+    /* typography */
+    --tu1-text-md: 1.2rem;
+
+    /* ... */
+}
+
+/* component */
+.sticky-feature {
+    position: relative;
+    z-index: 1;
+    padding: var(--sh4-space-lg) 0;
+}
+
+/* ... */
+
+/* utility classes */
+.tu1-text-center {
+    text-align: center;
+}
+
+.tu1-radius-lg {
+    border-radius: 0.5em;
+}
+
+
+/*main thing starts here*/
+html {
+    font-family: 'Open Sans', sans-serif;
+    border-spacing: 0;
+}
+
+body {
+    background-color: rgb(40, 141, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan {
+    border-bottom: 1px solid #e1d1ff;
+}
+
+.pricing-plan:last-child {
+    border-bottom: none;
+}
+
+.pricing-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+.heading {
+    color: #888;
+    font-weight: 600;
+}
+
+.feature {
+    margin: 50px 0px 25px;
+    color: #016ff9;
+    list-style-type: none;
+
+}
+
+.item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: normal;
+    padding: 15px 0;
+    border-top: 1px solid #e1d1ff;
+}
+
+.item:last-child {
+    border-bottom: 1px solid #e1d1ff;
+}
+
+.price {
+    font-weight: 700;
+    color: #016ff9;
+    display: block;
+    font-size: 32px;
+}
+
+.button {
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 15px;
+    transition: all 100ms ease-in-out;
+    font-size: 15px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #e1f1ff;
+}
+
+.extra {
+    color: white;
+    background-color: #48aaff;
+}
+
+.extra:hover,
+.extra:focus {
+    background-color: #269aff;
+}
+
+@media(min-width:900px) {
+    .panel-table {
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1d1ff;
+        padding: 10px 50px;
+    }
+
+    .pricing-plan:nth-of-type(3) {
+        border-right: none;
+    }
+}
